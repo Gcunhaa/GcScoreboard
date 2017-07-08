@@ -2,5 +2,6 @@ name: GcScoreboard
 author: Gcunha
 version: 0.1
 main: gc.scoreboard.ScoreBoard
+softdepends: [uRanking]
 commands:
   score:

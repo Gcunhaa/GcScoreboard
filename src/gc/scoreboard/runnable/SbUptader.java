@@ -35,8 +35,8 @@ public class SbUptader extends BukkitRunnable {
 				
 				if(pl.uranking) {
 					
-					Team rank = board.getTeam("rank");
-					rank.setSuffix(rankevent.rank);
+					Team ranker = board.getTeam("rank");
+					ranker.setSuffix(rankevent.rank);
 					
 				}
 				

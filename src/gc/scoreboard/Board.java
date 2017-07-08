@@ -39,10 +39,10 @@ public class Board {
 		grupo.setSuffix(" §7[Membro]");
 		
 		if(pl.uranking) {
-		    Team rank = board.registerNewTeam("rank");
-		    rank.addEntry(ChatColor.YELLOW.toString());
-	 	    rank.setPrefix(" §fRank");
-		    rank.setSuffix(" §a?");
+		    Team ranker = board.registerNewTeam("rank");
+		    ranker.addEntry(ChatColor.YELLOW.toString());
+	 	    ranker.setPrefix(" §fRank");
+		    ranker.setSuffix(" §a?");
 		}
 		
 		Team coins = board.registerNewTeam("coins");

@@ -41,7 +41,7 @@ public class ScoreBoard extends JavaPlugin {
 
 		if(Bukkit.getPluginManager().isPluginEnabled("uRanking")) {
 			
-			console.sendMessage(ChatColor.BLUE + "[GcScoreboard] uRanking encontrado. Hook ativado!");
+			console.sendMessage(ChatColor.BLUE + "[GcScoreboard] uRanking encontrado! Compatibilidade ativa.");
 			
 		}
 		
