@@ -11,6 +11,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import gc.scoreboard.comandos.CmdScore;
 import gc.scoreboard.eventos.EventoEntrarSair;
+import gc.scoreboard.eventos.PegarRankEvento;
 import gc.scoreboard.runnable.SbUptader;
 import net.md_5.bungee.api.ChatColor;
 import net.milkbowl.vault.chat.Chat;
@@ -22,6 +23,7 @@ public class ScoreBoard extends JavaPlugin {
 	public static Economy economy;
 	public static List<Player> scoreOff = new ArrayList<Player>();
 	public static Chat chat;
+	public boolean uranking = false;
 
 	@Override
 	public void onEnable() {
@@ -37,6 +39,12 @@ public class ScoreBoard extends JavaPlugin {
 			saveDefaultConfig();
 		}
 
+		if(Bukkit.getPluginManager().isPluginEnabled("uRanking")) {
+			
+			console.sendMessage(ChatColor.BLUE + "[GcScoreboard] uRanking encontrado. Hook ativado!");
+			
+		}
+		
 		setupEventos();
 		setupComandos();
 		setupRunnable();
@@ -46,6 +54,7 @@ public class ScoreBoard extends JavaPlugin {
 
 	private void setupEventos() {
 		Bukkit.getPluginManager().registerEvents(new EventoEntrarSair(), this);
+		Bukkit.getPluginManager().registerEvents(new PegarRankEvento(this), this);
 	}
 
 	private void setupRunnable() {

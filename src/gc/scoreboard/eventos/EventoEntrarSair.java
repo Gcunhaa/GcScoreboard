@@ -11,11 +11,12 @@ import gc.scoreboard.ScoreBoard;
 
 public class EventoEntrarSair implements Listener {
 	
-	@EventHandler
+	@EventHandler()
 	public void aoEntrar(PlayerJoinEvent e){
 		Player p = e.getPlayer();
 		new Board(p);
 	}
+	
 	
 	@EventHandler
 	public void aoSair(PlayerQuitEvent e){
