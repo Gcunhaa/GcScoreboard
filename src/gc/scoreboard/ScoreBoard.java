@@ -58,7 +58,7 @@ public class ScoreBoard extends JavaPlugin {
 	}
 
 	private void setupRunnable() {
-		new SbUptader().runTaskTimer(this, 0l, 15 * 20l);
+		new SbUptader().runTaskTimerAsynchronously(this, 0l, 15 * 20l);
 	}
 
 	private void setupComandos() {
